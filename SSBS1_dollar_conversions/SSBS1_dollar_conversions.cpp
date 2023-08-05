@@ -3,8 +3,8 @@
 #include <iostream>
 
 constexpr double dollar_to_yen = 141.76;
-constexpr double dollar_to_euro = 0.91;
-constexpr double dollar_to_pound = 0.78;
+constexpr double dollar_to_euro = 0.90;
+constexpr double dollar_to_pound = 1.30;
 char euro = 'e';
 
 int main()
@@ -24,7 +24,7 @@ int main()
         switch (conversion) {
             //'e' must come after a space, as the console reads it as an exponent otherwise
         case 'e':
-            std::cout << "\n$" << dollar << " is " << dollar_to_euro * dollar << " in euros\n";
+            std::cout << "\n$" << dollar << " is " << dollar/dollar_to_euro << " in euros\n";
             break;
         case 'y':
             std::cout << "\n$" << dollar << " is " << dollar_to_yen * dollar << " in yen\n";
